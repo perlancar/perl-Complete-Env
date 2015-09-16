@@ -1,0 +1,7 @@
+Revision history for Complete-Env
+
+0.01    2015-09-16 (PERLANCAR) (unreleased)
+
+        - First release, split from Complete-Util following the splitting of
+          Complete-File, to let Complete-Util really only contains generic
+          routines.
