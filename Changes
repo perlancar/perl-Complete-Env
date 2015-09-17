@@ -1,5 +1,10 @@
 Revision history for Complete-Env
 
+0.37    2015-09-17 (PERLANCAR)
+
+	- Add options fuzzy & map_case.
+
+
 0.36    2015-09-16 (PERLANCAR)
 
         - First release, split from Complete-Util following the splitting of
