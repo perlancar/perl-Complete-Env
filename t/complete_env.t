@@ -8,6 +8,8 @@ use Test::More 0.98;
 
 use Complete::Env qw(complete_env);
 
+local $Complete::Setting::OPT_FUZZY = 0;
+
 {
     local %ENV = (APPLE=>1, AWAY=>2, DOCTOR=>3, AN=>4);
     test_complete(
