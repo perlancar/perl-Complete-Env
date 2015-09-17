@@ -28,6 +28,9 @@ subtest ci => sub {
     );
 };
 
+# XXX test opt:fuzzy
+# XXX test opt:map_case
+
 DONE_TESTING:
 done_testing();
 
