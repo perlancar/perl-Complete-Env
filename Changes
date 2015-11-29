@@ -1,5 +1,13 @@
 Revision history for Complete-Env
 
+0.38    2015-11-29 (PERLANCAR)
+
+        - Adjust to Complete::Common 0.19.
+
+        - [Removed] Remove options 'ci', 'fuzzy', 'map_case' (one can
+	  alternatively set global behavior, see Complete::Common).
+
+
 0.37    2015-09-17 (PERLANCAR)
 
 	- Add options fuzzy & map_case.
