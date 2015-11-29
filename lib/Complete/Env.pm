@@ -7,7 +7,7 @@ use 5.010001;
 use strict;
 use warnings;
 
-use Complete::Setting;
+use Complete::Common qw(:all);
 
 require Exporter;
 our @ISA = qw(Exporter);
@@ -33,9 +33,6 @@ use case-insensitive option (`ci`) to match against original casing.
 _
     args => {
         word     => { schema=>[str=>{default=>''}], pos=>0, req=>1 },
-        ci       => { schema=>['bool'] },
-        fuzzy    => { schema=>['int*', min=>0] },
-        map_case => { schema=>['bool'] },
     },
     result_naked => 1,
     result => {
@@ -47,17 +44,14 @@ sub complete_env {
 
     my %args  = @_;
     my $word     = $args{word} // "";
-    my $ci       = $args{ci} // $Complete::Setting::OPT_CI;
-    my $fuzzy    = $args{fuzzy} // $Complete::Setting::OPT_FUZZY;
-    my $map_case = $args{map_case} // $Complete::Setting::OPT_MAP_CASE;
     if ($word =~ /^\$/) {
         Complete::Util::complete_array_elem(
             word=>$word, array=>[map {"\$$_"} keys %ENV],
-            ci=>$ci, fuzzy=>$fuzzy, map_case=>$map_case);
+        );
     } else {
         Complete::Util::complete_array_elem(
             word=>$word, array=>[keys %ENV],
-            ci=>$ci, fuzzy=>$fuzzy, map_case=>$map_case);
+        );
     }
 }
 1;
