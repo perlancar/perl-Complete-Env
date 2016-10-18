@@ -1,5 +1,10 @@
 Revision history for Complete-Env
 
+0.39    2016-10-18 (PERLANCAR)
+
+        - Add functions: complete_env_elem(), complete_path_env_elem().
+
+
 0.38    2015-11-29 (PERLANCAR)
 
         - Adjust to Complete::Common 0.19.
