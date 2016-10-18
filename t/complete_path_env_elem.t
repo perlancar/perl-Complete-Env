@@ -6,15 +6,15 @@ use warnings;
 
 use Test::More 0.98;
 
-use Complete::Env qw(complete_env);
+use Complete::Env qw(complete_path_env_elem);
 
 local $Complete::Common::OPT_FUZZY = 0;
 
 {
-    local %ENV = (APPLE=>1, AWAY=>2, DOCTOR=>3, AN=>4);
+    local $ENV{PATH} = 'foo:bar:baz';
     test_complete(
-        word      => 'A',
-        result    => [qw(AN APPLE AWAY)],
+        word      => 'ba',
+        result    => [qw(bar baz)],
     );
 }
 
@@ -25,7 +25,7 @@ sub test_complete {
     my (%args) = @_;
 
     my $name = $args{name} // $args{word};
-    my $res = complete_env(word=>$args{word});
+    my $res = complete_path_env_elem(word=>$args{word});
     is_deeply($res, $args{result}, "$name (result)")
         or diag explain($res);
 }
