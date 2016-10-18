@@ -34,7 +34,7 @@ use case-insensitive option (`ci`) to match against original casing.
 
 _
     args => {
-        word     => { schema=>[str=>{default=>''}], pos=>0, req=>1 },
+        %arg_word,
     },
     result_naked => 1,
     result => {
@@ -67,7 +67,7 @@ separated elements. This routine complete from the elements of such variable.
 
 _
     args => {
-        word     => { schema=>[str=>{default=>''}], pos=>0, req=>1 },
+        %arg_word,
         env      => {
             summary => 'Name of environment variable to use',
             schema  => 'str*',
@@ -107,7 +107,7 @@ elements. This routine complete from those elements.
 
 _
     args => {
-        word     => { schema=>[str=>{default=>''}], pos=>0, req=>1 },
+        %arg_word,
     },
     result_naked => 1,
     result => {
