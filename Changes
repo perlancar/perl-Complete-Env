@@ -1,3 +1,8 @@
+0.400   2017-12-31 (PERLANCAR)
+
+        - Handle path separator on Windows [RT#120969]. Thanks BAYMAX.
+
+
 0.39    2016-10-18 (PERLANCAR)
 
         - Add functions: complete_env_elem(), complete_path_env_elem().
