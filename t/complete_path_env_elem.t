@@ -11,9 +11,9 @@ use Complete::Env qw(complete_path_env_elem);
 local $Complete::Common::OPT_FUZZY = 0;
 
 {
-    local $ENV{FOO} = $^O eq q{MSWin32} ?
+    local $ENV{PATH} = $^O eq q{MSWin32} ?
         'foo;bar;baz' : 'foo:bar:baz';
-    
+
     test_complete(
         word      => 'ba',
         result    => [qw(bar baz)],
