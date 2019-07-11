@@ -1,14 +1,14 @@
-0.400   2017-12-31 (PERLANCAR)
+0.400   2017-12-31  Released-By: PERLANCAR
 
         - Handle path separator on Windows [RT#120969]. Thanks BAYMAX.
 
 
-0.39    2016-10-18 (PERLANCAR)
+0.39    2016-10-18  Released-By: PERLANCAR
 
         - Add functions: complete_env_elem(), complete_path_env_elem().
 
 
-0.38    2015-11-29 (PERLANCAR)
+0.38    2015-11-29  Released-By: PERLANCAR
 
         - Adjust to Complete::Common 0.19.
 
@@ -16,12 +16,12 @@
 	  alternatively set global behavior, see Complete::Common).
 
 
-0.37    2015-09-17 (PERLANCAR)
+0.37    2015-09-17  Released-By: PERLANCAR
 
 	- Add options fuzzy & map_case.
 
 
-0.36    2015-09-16 (PERLANCAR)
+0.36    2015-09-16  Released-By: PERLANCAR
 
         - First release, split from Complete-Util following the splitting of
           Complete-File, to let Complete-Util really only contains generic
